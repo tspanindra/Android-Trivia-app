@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="monisha.example.com.hw4.TriviaActivity">
+
+    <TextView
+        android:id="@+id/textViewQuestNum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="27dp"
+        android:layout_marginTop="16dp"
+        android:hint="Question Number"
+        android:textSize="15dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginStart="27dp" />
+
+    <TextView
+        android:id="@+id/textViewTimer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="101dp"
+        android:layout_marginTop="16dp"
+        android:hint="Timer"
+        android:textSize="15dp"
+        app:layout_constraintLeft_toRightOf="@+id/textViewQuestNum"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginStart="101dp" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="152dp"
+        android:layout_height="89dp"
+        android:layout_marginTop="34dp"
+        app:layout_constraintTop_toBottomOf="@+id/textViewQuestNum"
+        app:srcCompat="@mipmap/ic_launcher"
+        android:layout_marginStart="114dp"
+        android:layout_marginLeft="100dp"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewQuestion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="27dp"
+        android:layout_marginTop="52dp"
+        android:text="TextView"
+        android:textSize="12dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <RadioGroup
+        android:layout_width="300dp"
+        android:layout_height="135dp"
+        android:layout_marginLeft="27dp"
+        android:layout_marginTop="19dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewQuestion"
+        android:id="@+id/radioGroup" />
+
+    <Button
+        android:id="@+id/buttonQuitTrivia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="27dp"
+        android:layout_marginTop="42dp"
+        android:text="Quit"
+        android:textAllCaps="false"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+
+    <Button
+        android:id="@+id/buttonNext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="138dp"
+        android:layout_marginTop="42dp"
+        android:text="Next"
+        android:textAllCaps="false"
+        app:layout_constraintLeft_toRightOf="@+id/buttonQuitTrivia"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="168dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="42dp"
+        app:layout_constraintTop_toBottomOf="@+id/textViewQuestNum" />
+
+    <TextView
+        android:id="@+id/textViewProgress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="147dp"
+        android:layout_marginTop="0dp"
+        android:text="Loading Image"
+        android:textSize="15dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/progressBar" />
+</android.support.constraint.ConstraintLayout>
