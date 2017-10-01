@@ -1,12 +1,21 @@
 package monisha.example.com.hw4;
 
+import android.util.Log;
+
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.HashMap;
 
+/**
+ * Created by MONISHA on 29-09-2017.
+ */
 
 public class Question implements Serializable {
-    int id, answer;
-    String question, image;
+    int id;
+    String question, image, answer, selectedAnswer;
     ArrayList<String> choice = new ArrayList<>();
 
 
@@ -28,13 +37,17 @@ public class Question implements Serializable {
         this.id = id;
     }
 
-    public int getAnswer() {
+    public String getAnswer() {
         return answer;
     }
 
-    public void setAnswer(int answer) {
+    public void setAnswer(String answer) {
         this.answer = answer;
     }
+
+    public String getSelectedAnswer() {return selectedAnswer;}
+
+    public void setSelectedAnswer(String selectedAnswer) {this.selectedAnswer = selectedAnswer;}
 
     public String getQuestion() {
         return question;

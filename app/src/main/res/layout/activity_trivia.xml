@@ -53,19 +53,19 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <RadioGroup
+        android:id="@+id/radioGroup"
         android:layout_width="300dp"
-        android:layout_height="135dp"
+        android:layout_height="wrap_content"
         android:layout_marginLeft="27dp"
         android:layout_marginTop="19dp"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewQuestion"
-        android:id="@+id/radioGroup" />
+        app:layout_constraintTop_toBottomOf="@+id/textViewQuestion" />
 
     <Button
         android:id="@+id/buttonQuitTrivia"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="27dp"
+        android:layout_marginLeft="43dp"
         android:layout_marginTop="42dp"
         android:text="Quit"
         android:textAllCaps="false"
@@ -76,7 +76,7 @@
         android:id="@+id/buttonNext"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="138dp"
+        android:layout_marginLeft="115dp"
         android:layout_marginTop="42dp"
         android:text="Next"
         android:textAllCaps="false"
