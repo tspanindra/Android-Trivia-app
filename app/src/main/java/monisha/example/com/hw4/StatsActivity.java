@@ -13,7 +13,7 @@ import java.util.ArrayList;
 public class StatsActivity extends AppCompatActivity {
 
     ArrayList<Question> result = new ArrayList<>();
-    ArrayList<Question> resultFromTrivia = new ArrayList<>();
+    ArrayList<Question> resultFromTrivia;
     ArrayList<Question> wrongResult = new ArrayList<>();
     ProgressBar progressBarPercent;
     TextView percentRsult, review;
@@ -35,6 +35,8 @@ public class StatsActivity extends AppCompatActivity {
             if (!question.getChoice().get(Integer.parseInt(question.getAnswer()) - 1)
                     .equalsIgnoreCase(question.getSelectedAnswer())) {
                 wrongResult.add(question);
+            } else {
+                question.setSelectedAnswer(null);
             }
         }
 
@@ -61,12 +63,11 @@ public class StatsActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (getIntent().getExtras().getStringArrayList("stats") != null) {
-                    result = (ArrayList) getIntent().getExtras().get("stats");
+                    Intent tryAgainIntent = new Intent(StatsActivity.this, TriviaActivity.class);
+                    tryAgainIntent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                    tryAgainIntent.putExtra("questions", resultFromTrivia);
+                    startActivity(tryAgainIntent);
                 }
-                Intent tryAgainIntent = new Intent(StatsActivity.this, TriviaActivity.class);
-                tryAgainIntent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                tryAgainIntent.putExtra("questions", result);
-                startActivity(tryAgainIntent);
             }
         });
     }
